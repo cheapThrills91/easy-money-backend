@@ -1,4 +1,4 @@
-package com.easymoney.contato.resource;
+package com.easymoney.resource;
 
 import java.util.List;
 
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.easymoney.contato.model.Contato;
-import com.easymoney.contato.repository.Contatos;
+import com.easymoney.model.Contato;
+import com.easymoney.repository.Contatos;
 
 @RestController
 @RequestMapping("/contatos")

@@ -1,4 +1,4 @@
-package com.easymoney.contato.model;
+package com.easymoney.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
