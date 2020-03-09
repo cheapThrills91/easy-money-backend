@@ -20,10 +20,10 @@ public class Login {
 	private Long id;
 	
 	@NotBlank
-	private String user;
+	private String usuario;
 	
 	@NotBlank
-	private String password;
+	private String senha;
 
 	public Long getId() {
 		return id;
@@ -33,20 +33,20 @@ public class Login {
 		this.id = id;
 	}
 
-	public String getUser() {
-		return user;
+	public String getUsuario() {
+		return usuario;
 	}
 
-	public void setUser(String user) {
-		this.user = user;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
-	public String getPassWord() {
-		return password;
+	public String getSenha() {
+		return senha;
 	}
 
-	public void setPassWord(String password) {
-		this.password = password;
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
 	@Override
