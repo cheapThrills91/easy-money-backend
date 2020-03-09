@@ -5,3 +5,6 @@ heroku create easymoney-api // Cria a aplicação no Heroku
 heroku addons:create heroku-postgresql:hobby-dev // Vincula um banco a aplicação
 git push heroku master // Commita a aplicação para o Heroku
 heroku logs --tail //Verifica os logs da aplicação
+
+//repositorio Heroku
+git remote add heroku https://git.heroku.com/easymoney-api.git
