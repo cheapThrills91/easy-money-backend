@@ -22,8 +22,8 @@ public class Login {
 	@NotBlank
 	private String user;
 	
-	@NotNull
-	private String passWord;
+	@NotBlank
+	private String password;
 
 	public Long getId() {
 		return id;
@@ -42,11 +42,11 @@ public class Login {
 	}
 
 	public String getPassWord() {
-		return passWord;
+		return password;
 	}
 
-	public void setPassWord(String passWord) {
-		this.passWord = passWord;
+	public void setPassWord(String password) {
+		this.password = password;
 	}
 
 	@Override
@@ -73,6 +73,4 @@ public class Login {
 			return false;
 		return true;
 	}
-
-
 }
