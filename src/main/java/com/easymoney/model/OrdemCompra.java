@@ -3,7 +3,7 @@ package com.easymoney.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -18,13 +18,13 @@ public class OrdemCompra {
 	@GenericGenerator(name = "increment", strategy = "increment")
 	private Long id;
 	
-	@NotBlank
+	@NotNull
 	private double valorDesejado;
 	
-	@NotBlank
+	@NotNull
 	private double valorCompra;
 
-	@NotBlank
+	@NotNull
 	private double quantidade;
 
 	public Long getId() {
