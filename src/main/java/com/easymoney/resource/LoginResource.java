@@ -46,6 +46,22 @@ public class LoginResource {
 		
 		return ResponseEntity.ok(login);
 	}
+
+	@GetMapping("/{usuario}/{senha}")
+	public ResponseEntity<Login> validar(@PathVariable String usuario, @PathVariable String senha) {
+		Login login = logins.findByUsuario(usuario);
+		
+		if (login == null) {
+			return ResponseEntity.notFound().build();
+		}
+
+		if (login.getSenha() != senha)
+		{
+			return ResponseEntity.notFound().build();
+		}
+		
+		return ResponseEntity.ok(login);
+	}
 	
 	@PutMapping("/{id}")
 	public ResponseEntity<Login> atualizar(@PathVariable Long id, 
