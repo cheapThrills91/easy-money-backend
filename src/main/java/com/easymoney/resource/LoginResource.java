@@ -55,7 +55,8 @@ public class LoginResource {
 			return ResponseEntity.notFound().build();
 		}
 
-		if (login.getSenha() != senha)
+		String checkSenha = login.getSenha();
+		if (!checkSenha.equals(senha))
 		{
 			return ResponseEntity.notFound().build();
 		}
