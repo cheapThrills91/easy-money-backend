@@ -60,7 +60,7 @@ public class LoginResource {
 		String checkSenha = login.getSenha();
 		if (!checkSenha.equals(senha))
 		{
-			return ResponseEntity.notFound().build();
+			return ResponseEntity.badRequest().build();
 		}
 		
 		return ResponseEntity.ok(login);
