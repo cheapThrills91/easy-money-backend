@@ -1,10 +1,12 @@
 package com.easymoney.model;
 
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
+import com.easymoney.model.type.StatusCompra;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -26,6 +28,9 @@ public class OrdemCompra {
 
 	@NotNull
 	private double quantidade;
+	private Date dataCompra = new Date();
+	private StatusCompra status;
+	private Long loginId;
 
 	public Long getId() {
 		return id;
@@ -33,6 +38,13 @@ public class OrdemCompra {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public Long getClienteId() {
+		return loginId;
+	}
+	public void setClienteId(Long loginId) {
+		this.loginId = loginId;
 	}
 
 	public double getValorDesejado() {
@@ -59,6 +71,19 @@ public class OrdemCompra {
 		this.quantidade = quantidade;
 	}
 	
+	public Date getDataCompra() {
+		return dataCompra;
+	}
+	public void setDataCompra(Date dataCompra) {
+		this.dataCompra = dataCompra;
+	}
+
+	public StatusCompra getStatus() {
+		return status;
+	}
+	public void setStatus(StatusCompra status) {
+		this.status = status;
+	}
 
 	@Override
 	public int hashCode() {
